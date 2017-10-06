@@ -12,19 +12,19 @@
 	<link rel="stylesheet" href="css/base.css" media="all">
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
 </head>
-<body>
+<body style="height: 100%;">
 <header id="header">
 	<div class="container">
-	<h1><a href="index.html"><img src="img/LOGO/LOGO2.png" alt="台灣原生動物"></a></h1>
+	<h1><a href="index.html"><img src="img/LOGO/LOGO.png" alt="台灣原生動物" class="logo"></a></h1>
+	<a onclick="menu_btn();" class="icon-menu" title="menu"></a>
 	</div><!--/.container-->
 </header>
 
-<nav id="gnav">
-	<ul class="container">
-		<li><a href="#">首頁</a></li>
-		<li><a href="#">動物筆記</a></li>
-		<li><a href="#animal_2">動物棲地</a></li>
-		<li><a href="#">保育動物</a></li>
+<nav id="gnav" class="hide">
+	<ul>
+		<li><a href="#header">HOME</a></li>
+		<li><a href="#animalnotes">NOTES</a></li>
+		<li><a href="#animal_2">Habitats</a></li>
 	</ul>
 </nav>
 
@@ -227,6 +227,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="js/base.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script type="text/javascript">
 	$(window).load(function() {

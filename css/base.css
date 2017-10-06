@@ -33,7 +33,8 @@ body{
 	line-height: 1.5;
 	font-size: 14px;
 	font-family: sans-serif;
-	background: url(../img/bg.jpg);
+	overflow-y: scroll;
+	overflow-x: hidden;　
 }
 
 a{
@@ -92,11 +93,36 @@ img, input, select, textarea {
 ---------------------------*/
 
 #header{
-	padding: 5% 12.5% 5% 12.5%;
+	padding: 1.5% 0;
 	text-align: center;
 	position: relative;
-	background: url(../img/腳印.png) center top no-repeat;
-	background-size: cover;
+	background-color: #008800;
+}
+
+#header .logo{
+	float: left;
+}
+
+#header .icon-menu{
+	float: right;
+	color: #fff;
+	font-size: 35px;
+}
+
+#header .icon-menu:hover{
+	color: #cee739;
+}
+
+@media screen and (min-width: 750px){
+
+	#header .logo{
+		max-width: 100%;
+		float: none;
+	}
+
+	#header .icon-menu{
+		display: none;
+	}
 }
 
 /* 首尾
@@ -128,7 +154,7 @@ img, input, select, textarea {
 	padding-bottom: 10px; 
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 750px){
 	#footer{
 		text-align: center;
 		clear: both;
@@ -147,28 +173,69 @@ img, input, select, textarea {
 ---------------------------*/
 
 #gnav{
-	background: #008800; 
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	z-index: 3;
+	padding:0 12.5% 0 12.5%;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 25%;
 }
 
 #gnav ul{
-	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 75%;
 }
 
 #gnav li{
-	float: left;
-	width: 25%;
-	text-align: center;
+	border-bottom: 1px solid #cee739;
 }
 
 #gnav a{
 	display: block;
-	padding: 15px 0;
+	font-size: 15px;
 	color: #fff;
-	font-size: 18px;
 }
 
 #gnav a:hover{
-	background: #00DD00;
+	background: #cee739;
+}
+
+@media screen and (min-width: 750px){
+	
+	#gnav{
+		position: static;
+		height: auto;
+		width: auto;
+	}
+
+	#gnav ul{
+		position: static;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	#gnav li{
+		float: left;
+		width: 33%;
+		text-align: center;
+		border-right: 1px solid #cee739;
+		border-bottom: none;
+		
+	}
+
+	#gnav li:first-child{
+		border-left: 1px solid #cee739;
+	}
+
+	#gnav a{
+		padding: 15px 0;
+		font-size: 18px;
+	}
+
 }
 
 /* 內容區塊
@@ -229,6 +296,7 @@ h2 a{
 	border-radius: 0 30px 30px 0;
 }
 
+/*動物筆記敘述*/
 .data{
 	clear: both;
 	max-width: 100%;
@@ -258,7 +326,7 @@ h2 a{
 	position: relative;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 750px){
 	#main h2{
 		text-align: center;
 	}
@@ -286,6 +354,7 @@ h2 a{
 
 .top{
 	position: fixed;
+	z-index: 3;
 	right: 0;
 	bottom: 25px;
 }
@@ -318,6 +387,7 @@ h2 a{
 	padding-right: 10px;
 	margin: 0 auto;
 	position: relative;
+
 }
 
 .container:after{
@@ -336,6 +406,19 @@ h2 a{
 
 .data{
 	width: 640px;
+}
+
+/*動畫效果*/
+
+.hide{
+	display: none;
+}
+
+@media screen and (min-width: 750px){
+	
+	.hide{
+		display: block;
+	}
 }
 
 /*icon*/
@@ -365,6 +448,12 @@ h2 a{
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-leaf:before {
+  content: "\e9a4";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
 .icon-facebook2:before {
   content: "\ea91";
 }
