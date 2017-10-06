@@ -183,6 +183,16 @@ img, input, select, textarea {
 	width: 25%;
 }
 
+#gnav_span{
+	background: rgba(0, 0, 0, 0.2);
+	position: fixed;
+	z-index: 3;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 50%;
+}
+
 #gnav ul{
 	position: absolute;
 	left: 0;
@@ -236,6 +246,9 @@ img, input, select, textarea {
 		font-size: 18px;
 	}
 
+	#gnav_span{
+		display: none;
+	}
 }
 
 /* 內容區塊
