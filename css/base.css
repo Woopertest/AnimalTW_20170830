@@ -97,6 +97,8 @@ img, input, select, textarea {
 	text-align: center;
 	position: relative;
 	background-color: #008800;
+	background: url(../img/腳印.png) no-repeat center center;
+	background-size: cover;
 }
 
 #header #logo{
